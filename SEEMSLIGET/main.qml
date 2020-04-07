@@ -1,12 +1,14 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
+import "autotest.js" as MainTest
+import "maindesign.js" as MainScripts
 
 Window
 {
     visible: true
     width: 640
     height: 480
-    title: qsTr("Hello World")
+    title: qsTr("LOVE")
 
     MouseArea
     {
@@ -31,6 +33,7 @@ Window
 
         Rectangle
         {
+            width: MainScripts.maxsize(parent.width, parent.height)
             anchors.fill: parent
             anchors.margins: -10
             color: "transparent"
