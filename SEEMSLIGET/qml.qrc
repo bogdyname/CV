@@ -1,7 +1,9 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
-        <file>maindesign.js</file>
-        <file>autotest.js</file>
+        <file>scripts/autotest.js</file>
+        <file>scripts/maindesign.js</file>
+        <file>elements/texteditor.qml</file>
+        <file>elements/listofnode.qml</file>
+        <file>elements/main.qml</file>
     </qresource>
 </RCC>
