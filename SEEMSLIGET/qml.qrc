@@ -2,8 +2,8 @@
     <qresource prefix="/">
         <file>scripts/autotest.js</file>
         <file>scripts/maindesign.js</file>
-        <file>elements/texteditor.qml</file>
-        <file>elements/listofnode.qml</file>
+        <file>elements/ListOfNode.qml</file>
         <file>elements/main.qml</file>
+        <file>elements/TextEditor.qml</file>
     </qresource>
 </RCC>
