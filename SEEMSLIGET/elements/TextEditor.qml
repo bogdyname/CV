@@ -1,6 +1,5 @@
 import QtQuick 2.12
-import "../scripts/autotest.js" as MainTest
-import "../scripts/maindesign.js" as MainScripts
+import "../scripts/main.js" as MainScripts
 
 Rectangle
 {

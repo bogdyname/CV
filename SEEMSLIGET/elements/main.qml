@@ -1,8 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Window 2.1
-import "../scripts/autotest.js" as MainTest
-import "../scripts/maindesign.js" as MainScripts
-//import "texteditor.qml" as SpaceEdit
+import "../scripts/main.js" as MainScripts
 
 Window
 {

@@ -1,8 +1,6 @@
 <RCC>
     <qresource prefix="/">
-        <file>scripts/autotest.js</file>
-        <file>scripts/maindesign.js</file>
-        <file>elements/ListOfNode.qml</file>
+        <file>scripts/main.js</file>
         <file>elements/main.qml</file>
         <file>elements/TextEditor.qml</file>
     </qresource>
