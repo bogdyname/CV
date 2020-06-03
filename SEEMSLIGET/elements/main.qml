@@ -10,6 +10,11 @@ Window
     height: 480
     title: qsTr("LOVE")
 
+    Button
+    {
+
+    }
+
     Rectangle
     {
         id: button
@@ -26,15 +31,15 @@ Window
 
         MouseArea
         {
-         id: buttonMouseArea
-         anchors.fill: parent
+            id: buttonMouseArea
+            anchors.fill: parent
 
-         onClicked: console.log(labelOfButton.text + "'clicked'")
+            onClicked: console.log(labelOfButton.text + "'clicked'")
          }
     }
 
-    TextEditor
-    {
+    //TextEditor
+    //{
 
-    }
+    //}
 }
