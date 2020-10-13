@@ -14,32 +14,4 @@ Window
     {
 
     }
-
-    Rectangle
-    {
-        id: button
-        color: "grey"
-        width: 100
-        height: 40
-
-        Text
-        {
-            id: labelOfButton
-            text: "tts"
-            anchors.centerIn: parent;
-        }
-
-        MouseArea
-        {
-            id: buttonMouseArea
-            anchors.fill: parent
-
-            onClicked: console.log(labelOfButton.text + "'clicked'")
-         }
-    }
-
-    //TextEditor
-    //{
-
-    //}
 }
