@@ -10,14 +10,14 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/elements/main.qml"));
 
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated, &app, [url](QObject *obj, const QUrl &objUrl)
+    connect(&engine, &QQmlApplicationEngine::objectCreated, &app, [url](QObject *obj, const QUrl &objUrl)
     {
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
 
     }, Qt::QueuedConnection);
 
-    engine.QQmlApplicationEngine::load(url);
+    engine.load(url);
 
-    return app.QGuiApplication::exec();
+    return app.exec();
 }
