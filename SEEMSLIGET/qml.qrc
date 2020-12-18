@@ -1,9 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>scripts/main.js</file>
-        <file>elements/main.qml</file>
-        <file>elements/TextEditor.qml</file>
-        <file>elements/Button.qml</file>
-        <file>elements/FileMenu.qml</file>
-    </qresource>
-</RCC>
