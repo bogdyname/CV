@@ -1,5 +1,17 @@
 <RCC>
     <qresource prefix="/">
         <file>smv.qml</file>
+        <file>content/Banner.qml</file>
+        <file>content/Button.qml</file>
+        <file>content/CheckBox.qml</file>
+        <file>content/Settings.qml</file>
+        <file>content/StockChart.qml</file>
+        <file>content/StockInfo.qml</file>
+        <file>content/StockListDelegate.qml</file>
+        <file>content/StockListModel.qml</file>
+        <file>content/StockListView.qml</file>
+        <file>content/StockModel.qml</file>
+        <file>content/StockSettingsPanel.qml</file>
+        <file>content/StockView.qml</file>
     </qresource>
 </RCC>
