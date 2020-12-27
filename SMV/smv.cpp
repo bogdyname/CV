@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
     QQuickView view;
     view.connect(view.engine(), &QQmlEngine::quit, &app, &QCoreApplication::quit);
-    view.setSource(QUrl("qrc:/smv/smv.qml"));
+    view.setSource(QUrl("qrc:/smv.qml"));
 
     if (view.status() == QQuickView::Error)
         return -1;
