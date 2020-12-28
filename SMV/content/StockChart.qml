@@ -48,6 +48,7 @@ Rectangle {
         columns: 6
         rows: 3
         columnSpacing: 4
+
         Button {
             id: weekButton
             text: "Week"
@@ -335,6 +336,7 @@ Rectangle {
             Layout.alignment: Qt.AlignLeft
             text: "| " + startDate.toDateString()
         }
+
         Text {
             id: toDate
             color: "#000000"

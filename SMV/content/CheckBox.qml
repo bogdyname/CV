@@ -6,6 +6,7 @@ Item {
     width: 30
     height: 30
     x: 5
+
     MouseArea {
         id: mouse
         anchors.fill: parent
@@ -16,6 +17,7 @@ Item {
                 buttonEnabled = true;
         }
     }
+
     Rectangle {
         id: checkbox
         width: 30
@@ -25,6 +27,7 @@ Item {
         antialiasing: true
         radius: 2
         color: "transparent"
+
         Rectangle {
             anchors.fill: parent
             anchors.margins: 5

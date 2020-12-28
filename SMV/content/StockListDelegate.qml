@@ -6,6 +6,7 @@ Rectangle {
     height: 102
     width: parent.width
     color: "transparent"
+
     MouseArea {
         anchors.fill: parent;
         onClicked: {
@@ -15,6 +16,7 @@ Rectangle {
                 view.currentIndex = index;
         }
     }
+
     GridLayout {
         id: stockGrid
         columns: 3
@@ -45,6 +47,7 @@ Rectangle {
             verticalAlignment: Text.AlignVCenter
             text: value
         }
+
         Text {
             id: stockValueChangeText
             Layout.preferredWidth: 135
@@ -64,6 +67,7 @@ Rectangle {
                     color = "#d40000";
             }
         }
+
         Text {
             id: stockNameText
             Layout.preferredWidth: 300
@@ -79,7 +83,9 @@ Rectangle {
             text: name
         }
 
-        Item {Layout.fillWidth: true }
+        Item {
+            Layout.fillWidth: true
+        }
 
         Text {
             id: stockValueChangePercentageText
