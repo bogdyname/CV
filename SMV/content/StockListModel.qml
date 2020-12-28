@@ -55,8 +55,6 @@ ListModel {
         }
         xhr.send()
     }
-    // Uncomment to test invalid entries
-    // ListElement {name: "The Qt Company"; stockId: "TQTC"; value: "999.0"; change: "0.0"; changePercentage: "0.0"}
 
     // Offline data downloaded using the url, https://www.quandl.com/api/v3/datasets/WIKI/<stockId>.csv.
     ListElement {name: "Advanced Micro Devices Inc."; stockId: "AMD"; value: "0.0"; change: "0.0"; changePercentage: "0.0"}

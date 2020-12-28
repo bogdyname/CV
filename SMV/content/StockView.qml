@@ -44,6 +44,7 @@ Rectangle {
                 stockModel: root.stock
                 settings: settingsPanel
             }
+
             StockSettingsPanel {
                 id: settingsPanel
                 Layout.alignment: Qt.AlignBottom

@@ -37,11 +37,13 @@ Rectangle {
             text: "Open"
             Layout.leftMargin: 10
         }
+
         Rectangle {
             Layout.preferredHeight: 4
             Layout.preferredWidth: 114
             color: openColor
         }
+
         CheckBox {
             id: openButton
             buttonEnabled: false
@@ -57,6 +59,7 @@ Rectangle {
             font.pointSize: 19
             text: "Close"
         }
+
         Rectangle {
             Layout.preferredHeight: 4
             Layout.preferredWidth: 114
@@ -77,11 +80,13 @@ Rectangle {
             font.pointSize: 19
             text: "High"
         }
+
         Rectangle {
             Layout.preferredHeight: 4
             Layout.preferredWidth: 114
             color: highColor
         }
+
         CheckBox {
             id: highButton
             buttonEnabled: true
@@ -97,6 +102,7 @@ Rectangle {
             font.pointSize: 19
             text: "Low"
         }
+
         Rectangle {
             Layout.preferredHeight: 4
             Layout.preferredWidth: 114

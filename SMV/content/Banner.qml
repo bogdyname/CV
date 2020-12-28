@@ -10,10 +10,12 @@ Rectangle {
         anchors.fill: parent
         rows: 1
         columns: 3
+
         Rectangle {
             Layout.leftMargin: 10
             Layout.topMargin: 20
             Layout.alignment: Qt.AlignLeft | Qt.AlignTop
+
             Image {
                 id: arrow
                 source: "./images/icon-left-arrow.png"
@@ -25,6 +27,7 @@ Rectangle {
                 }
             }
         }
+
         Text {
             id: stocText
             color: "#ffffff"
@@ -34,6 +37,7 @@ Rectangle {
             Layout.alignment: Qt.AlignRight
             Layout.leftMargin: parent.width / 2.5
         }
+
         Text {
             id: qtText
             color: "#5caa15"
