@@ -4,20 +4,23 @@ function drawBackground(ctx) {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.strokeStyle = "#d7d7d7";
     ctx.beginPath();
+
     // Horizontal grid lines
-    for (var i = 0; i < 12; i++) {
-        ctx.moveTo(0, canvas.yGridOffset + i * canvas.yGridStep);
-        ctx.lineTo(canvas.width, canvas.yGridOffset + i * canvas.yGridStep);
+    for (var iter = 0; iter < 12; iter++) {
+        ctx.moveTo(0, canvas.yGridOffset + iter * canvas.yGridStep);
+        ctx.lineTo(canvas.width, canvas.yGridOffset + iter * canvas.yGridStep);
     }
 
     // Vertical grid lines
     var height = 35 * canvas.height / 36;
     var yOffset = canvas.height - height;
     var xOffset = 0;
-    for (i = 0; i < chart.gridSize; i++) {
-        ctx.moveTo(xOffset + i * chart.gridStep, yOffset);
-        ctx.lineTo(xOffset + i * chart.gridStep, height);
+
+    for (iter = 0; iter < chart.gridSize; iter++) {
+        ctx.moveTo(xOffset + iter * chart.gridStep, yOffset);
+        ctx.lineTo(xOffset + iter * chart.gridStep, height);
     }
+
     ctx.stroke();
 
     // Right ticks
@@ -26,10 +29,12 @@ function drawBackground(ctx) {
     var xStart = canvas.width - tickMargin;
     ctx.moveTo(xStart, 0);
     ctx.lineTo(xStart, canvas.height);
-    for (i = 0; i < 12; i++) {
-        ctx.moveTo(xStart, canvas.yGridOffset + i * canvas.yGridStep);
-        ctx.lineTo(canvas.width, canvas.yGridOffset + i * canvas.yGridStep);
+
+    for (iter = 0; iter < 12; iter++) {
+        ctx.moveTo(xStart, canvas.yGridOffset + iter * canvas.yGridStep);
+        ctx.lineTo(canvas.width, canvas.yGridOffset + iter * canvas.yGridStep);
     }
+
     ctx.moveTo(0, canvas.yGridOffset + 9 * canvas.yGridStep);
     ctx.lineTo(canvas.width, canvas.yGridOffset + 9 * canvas.yGridStep);
     ctx.closePath();
@@ -49,15 +54,16 @@ function drawScales(ctx, high, low, vol)
     // prices on y-axis
     var x = canvas.width - tickMargin + 3;
     var priceStep = (high - low) / 9.0;
-    for (var i = 0; i < 10; i += 2) {
-        var price = parseFloat(high - i * priceStep).toFixed(1);
-        ctx.text(price, x, canvas.yGridOffset + i * yGridStep - 2);
+
+    for (var iter = 0; iter < 10; iter += 2) {
+        var price = parseFloat(high - iter * priceStep).toFixed(1);
+        ctx.text(price, x, canvas.yGridOffset + iter * yGridStep - 2);
     }
 
     // volume scale
-    for (i = 0; i < 3; i++) {
-        var volume = volumeToString(vol - (i * (vol/3)));
-        ctx.text(volume, x, canvas.yGridOffset + (i + 9) * yGridStep + 10);
+    for (iter = 0; iter < 3; iter++) {
+        var volume = volumeToString(vol - (iter * (vol / 3)));
+        ctx.text(volume, x, canvas.yGridOffset + (iter + 9) * yGridStep + 10);
     }
 
     ctx.closePath();
@@ -78,18 +84,19 @@ function drawPrice(ctx, from, to, color, price, points, highest, lowest)
     var end = points.length;
 
     var range = highest - lowest;
+
     if (range == 0) {
         range = 1;
     }
 
-    for (var i = 0; i < end; i += pixelSkip) {
-        var x = points[i].x;
-        var y = points[i][price];
+    for (var iter = 0; iter < end; iter += pixelSkip) {
+        var x = points[iter].x;
+        var y = points[iter][price];
         var h = 9 * yGridStep;
 
-        y = h * (lowest - y)/range + h + yGridOffset;
+        y = h * (lowest - y) / range + h + yGridOffset;
 
-        if (i == 0) {
+        if (iter == 0) {
             ctx.moveTo(x, y);
         } else {
             ctx.lineTo(x, y);
@@ -119,9 +126,9 @@ function drawVolume(ctx, from, to, color, price, points, highest)
 
     // To match the volume graph with price grid, skip drawing the initial
     // volume of the first day on chart.
-    for (var i = 1; i < end; i += pixelSkip) {
-        var x = points[i - 1].x;
-        var y = points[i][price];
+    for (var iter = 1; iter < end; iter += pixelSkip) {
+        var x = points[iter - 1].x;
+        var y = points[iter][price];
         y = canvas.height * (y / highest);
         y = 3 * y / 12;
         ctx.fillRect(x, canvas.height - y + yGridOffset,
