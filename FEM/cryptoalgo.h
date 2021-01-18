@@ -1,16 +1,16 @@
 #ifndef CRYPTOALGO_H
 #define CRYPTOALGO_H
 
-#include <QObject>
+#include <iostream>
+#include <algorithm>
 
-class CryptoAlgo : public QObject
+class CryptoAlgo
 {
-    Q_OBJECT
-public:
-    explicit CryptoAlgo(QObject *parent = nullptr);
 
-signals:
+public:
+    explicit CryptoAlgo(const float key = 1.0);
+    ~CryptoAlgo();
 
 };
 
-#endif // CRYPTOALGO_H
+#endif
