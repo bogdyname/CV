@@ -1,7 +1,11 @@
 #include "cryptoalgo.h"
 
-CryptoAlgo::CryptoAlgo(QObject *parent)
-    : QObject(parent)
+CryptoAlgo::CryptoAlgo(const float key)
+{
+
+}
+
+CryptoAlgo::~CryptoAlgo()
 {
 
 }
