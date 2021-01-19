@@ -8,7 +8,7 @@ Filemanager::Filemanager(QFile *parent, unsigned short int countFiles)
 
 Filemanager::~Filemanager()
 {
-
+    qDebug() << "Filemanager object deleted";
 }
 
 void Filemanager::LoadFile(const QString& filename)
