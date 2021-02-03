@@ -12,8 +12,8 @@
 class Filemanager : public QFile
 {
     Q_OBJECT
-    QML_ELEMENT
-    Q_PROPERTY(QString userName READ userName WRITE setUserName NOTIFY userNameChanged)
+    //QML_ELEMENT
+    //Q_PROPERTY(QString userName READ userName WRITE setUserName NOTIFY userNameChanged)
 
 public:
     explicit Filemanager(QFile *parent = nullptr, unsigned short int countFiles = 1);

@@ -3,7 +3,7 @@
 Filemanager::Filemanager(QFile *parent, unsigned short int countFiles)
     : QFile(parent)
 {
-    cryptomanager = QSharedPointer<CryptoAlgo>(new CryptoAlgo, &QObject::deleteLater);
+    //cryptomanager = QSharedPointer<CryptoAlgo>(new CryptoAlgo, &QObject::deleteLater);
 }
 
 Filemanager::~Filemanager()
