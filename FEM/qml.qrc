@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>UI/DropArea.qml</file>
+        <file>UI/LineEdit.qml</file>
     </qresource>
 </RCC>

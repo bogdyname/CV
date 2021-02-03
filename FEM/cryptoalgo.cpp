@@ -22,8 +22,10 @@ bool CryptoAlgo::SetAlgorithmToEncrypto(Algorithms algorithm)
         case Algorithms::DES: EncryptoDES(); break;
         case Algorithms::AES: EncryptoAES(); break;
         case Algorithms::IDEA: EncryptoIDEA(); break;
-        default: return false; break;
+        default: return false;
     }
+
+    return true;
 }
 
 bool CryptoAlgo::SetAlgorithmToDecrypto(Algorithms algorithm)
@@ -34,54 +36,56 @@ bool CryptoAlgo::SetAlgorithmToDecrypto(Algorithms algorithm)
         case Algorithms::DES: DecryptoDES(); break;
         case Algorithms::AES: DecryptoAES(); break;
         case Algorithms::IDEA: DecryptoIDEA(); break;
-        default: return false; break;
+        default: return false;
     }
+
+    return true;
 }
 
 /*--------------------------------RSA--------------------------------*/
 bool CryptoAlgo::EncryptoRSA()
 {
-
+    return true;
 }
 
 bool CryptoAlgo::DecryptoRSA()
 {
-
+    return true;
 }
 /*--------------------------------RSA--------------------------------*/
 
 /*--------------------------------DES--------------------------------*/
 bool CryptoAlgo::EncryptoDES()
 {
-
+    return true;
 }
 
 bool CryptoAlgo::DecryptoDES()
 {
-
+    return true;
 }
 /*--------------------------------DES--------------------------------*/
 
 /*--------------------------------AES--------------------------------*/
 bool CryptoAlgo::EncryptoAES()
 {
-
+    return true;
 }
 
 bool CryptoAlgo::DecryptoAES()
 {
-
+    return true;
 }
 /*--------------------------------AES--------------------------------*/
 
 /*-------------------------------IDEA--------------------------------*/
 bool CryptoAlgo::EncryptoIDEA()
 {
-
+    return true;
 }
 
 bool CryptoAlgo::DecryptoIDEA()
 {
-
+    return true;
 }
 /*-------------------------------IDEA--------------------------------*/
