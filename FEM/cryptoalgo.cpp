@@ -2,10 +2,10 @@
 
 using namespace std;
 
-CryptoAlgo::CryptoAlgo(const float key)
-    : key(key)
+CryptoAlgo::CryptoAlgo(const float firstSeedValue, const float secondSeedValue)
+    : firstSeed(firstSeedValue), secondSeed(secondSeedValue)
 {
-    if(!key)
+    if(!firstSeed || !secondSeed)
         this->~CryptoAlgo();
 }
 
@@ -40,6 +40,21 @@ bool CryptoAlgo::SetAlgorithmToDecrypto(Algorithms algorithm)
     }
 
     return true;
+}
+
+float CryptoAlgo::SelectFirstSeed(float value)
+{
+
+}
+
+float CryptoAlgo::SelectSecondSeed(float value)
+{
+
+}
+
+float CryptoAlgo::EulersTotientFunction(float x)
+{
+
 }
 
 /*--------------------------------RSA--------------------------------*/
