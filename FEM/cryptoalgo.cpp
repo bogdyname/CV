@@ -52,9 +52,12 @@ float CryptoAlgo::SelectSecondSeed(float value)
 
 }
 
-float CryptoAlgo::EulersTotientFunction(float x)
+float CryptoAlgo::EulersTotientFunction(float n)
 {
-
+    if(n > 1)
+        return (n * 3.14 * (1 - (1 / n)));
+    else
+        return n;
 }
 
 /*--------------------------------RSA--------------------------------*/
