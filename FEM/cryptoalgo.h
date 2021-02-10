@@ -14,7 +14,6 @@ class CryptoAlgo
         IDEA
     };
 
-
 public:
     explicit CryptoAlgo(const float firstSeedValue = 1.0, const float secondSeedValue = 1.0);
     ~CryptoAlgo();

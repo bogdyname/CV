@@ -2,6 +2,7 @@
 #define FILEMANAGER_H
 
 #include <QSharedPointer>
+#include <QDateTime>
 #include <QObject>
 #include <qqml.h>
 #include <QFile>

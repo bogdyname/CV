@@ -44,15 +44,7 @@ bool CryptoAlgo::SetAlgorithmToDecrypto(Algorithms algorithm)
 
 float CryptoAlgo::SelectFirstSeed(float value)
 {
-    int res = 1;
-    while (e > 0) {
-        if (e % 2 != 0) {
-            res = (m*res) % n;
-        }
-        m = (m*m) % n;
-        e /= 2;
-    }
-    return res;
+
 }
 
 float CryptoAlgo::SelectSecondSeed(float value)
