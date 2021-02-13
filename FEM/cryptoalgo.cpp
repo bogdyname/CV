@@ -7,6 +7,9 @@ CryptoAlgo::CryptoAlgo(const float firstSeedValue, const float secondSeedValue)
 {
     if(!firstSeed || !secondSeed)
         this->~CryptoAlgo();
+
+    publicKey = 0x0;
+    privateKey = 0x0;
 }
 
 CryptoAlgo::~CryptoAlgo()
@@ -52,13 +55,25 @@ float CryptoAlgo::SelectSecondSeed(float value)
 
 }
 
-float CryptoAlgo::EulersTotientFunction(float n)
+/*-------------------------------MATH--------------------------------*/
+float CryptoAlgo::EulersTotientFunction(const float n)
 {
     if(n > 1)
         return (n * 3.14 * (1 - (1 / n)));
     else
         return n;
 }
+
+float CryptoAlgo::MakePublicKey(const float value)
+{
+
+}
+
+float CryptoAlgo::MakePrivateKey(const float value)
+{
+
+}
+/*-------------------------------MATH--------------------------------*/
 
 /*--------------------------------RSA--------------------------------*/
 bool CryptoAlgo::EncryptoRSA()
