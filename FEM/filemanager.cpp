@@ -26,10 +26,7 @@ void Filemanager::LoadFile(const QString& filename)
         file.close();
     }
     else
-    {
         file.close();
-        throw "Can't open file.";
-    }
 
     return;
 }
@@ -37,7 +34,7 @@ void Filemanager::LoadFile(const QString& filename)
 void Filemanager::LoadFiles(const QStringList& filenames)
 {
     if(filenames.isEmpty())
-        throw "Can't load file: file name is empty";
+        return;
 
     QFile file;
 
@@ -54,7 +51,7 @@ void Filemanager::LoadFiles(const QStringList& filenames)
         else
         {
             file.close();
-            throw "Can't open file from list of file.";
+            break;
         }
     }
 
