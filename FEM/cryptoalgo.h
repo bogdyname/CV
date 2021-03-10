@@ -6,21 +6,10 @@
 
 class CryptoAlgo
 {
-    enum Algorithms
-    {
-        RSA,
-        DES,
-        AES,
-        IDEA
-    };
 
 public:
     explicit CryptoAlgo(const float firstSeedValue = 0x1p-1022, const float secondSeedValue = 0x1.ffffffffffp+1023);
     ~CryptoAlgo();
-
-public:
-    bool SetAlgorithmToEncrypto(Algorithms algorithm = RSA);
-    bool SetAlgorithmToDecrypto(Algorithms algorithm = RSA);
 
 //random
 private:
@@ -37,15 +26,6 @@ protected:
 private:
     bool EncryptoRSA();
     bool DecryptoRSA();
-
-    bool EncryptoDES();
-    bool DecryptoDES();
-
-    bool EncryptoAES();
-    bool DecryptoAES();
-
-    bool EncryptoIDEA();
-    bool DecryptoIDEA();
 
 private:
     float firstSeed;
