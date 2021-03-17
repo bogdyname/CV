@@ -2,7 +2,7 @@
 
 using namespace std;
 
-CryptoAlgo::CryptoAlgo(const float firstSeedValue, const float secondSeedValue)
+CryptoAlgo::CryptoAlgo(const long long firstSeedValue, const long long secondSeedValue)
     : firstSeed(firstSeedValue), secondSeed(secondSeedValue)
 {
     if(!firstSeed || !secondSeed)
@@ -17,18 +17,26 @@ CryptoAlgo::~CryptoAlgo()
     cout << "CryptoAlgo object deleted" << endl;
 }
 
-float CryptoAlgo::SelectFirstSeed(float value)
+long long CryptoAlgo::SelectFirstSeed(long long value)
 {
 
 }
 
-float CryptoAlgo::SelectSecondSeed(float value)
+long long CryptoAlgo::SelectSecondSeed(long long value)
 {
 
 }
 
 /*-------------------------------MATH--------------------------------*/
-float CryptoAlgo::EulersTotientFunction(const float n)
+bool CryptoAlgo::MillerTest(const long long n)
+{
+    if(n < 1)
+        return false;
+
+    double round = log(n);
+}
+
+long long CryptoAlgo::EulersTotientFunction(const long long n)
 {
     if(n > 1)
         return (n * 3.14 * (1 - (1 / n)));
@@ -36,12 +44,12 @@ float CryptoAlgo::EulersTotientFunction(const float n)
         return n;
 }
 
-float CryptoAlgo::MakePublicKey(const float value)
+long long CryptoAlgo::MakePublicKey(const long long value)
 {
 
 }
 
-float CryptoAlgo::MakePrivateKey(const float value)
+long long CryptoAlgo::MakePrivateKey(const long long value)
 {
 
 }

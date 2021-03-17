@@ -1,26 +1,32 @@
 #ifndef CRYPTOALGO_H
 #define CRYPTOALGO_H
 
+#include <cmath>
 #include <iostream>
 #include <algorithm>
 
 class CryptoAlgo
 {
 
+    /*
+        First seed is MIN of long long
+        Second seed is MAX of long long
+    */
 public:
-    explicit CryptoAlgo(const float firstSeedValue = 0x1p-1022, const float secondSeedValue = 0x1.ffffffffffp+1023);
+    explicit CryptoAlgo(const long long firstSeedValue = 0x8000000000000000, const long long secondSeedValue = 0x7FFFFFFFFFFFFFFF);
     ~CryptoAlgo();
 
 //random
 private:
-    float SelectFirstSeed(float value = 1.0);
-    float SelectSecondSeed(float value = 1.0);
+    long long SelectFirstSeed(long long value = 1.0);
+    long long SelectSecondSeed(long long value = 1.0);
 
 //math
 protected:
-    float EulersTotientFunction(const float x = 1.0);
-    float MakePublicKey(const float value = 0x47867f);
-    float MakePrivateKey(const float value = 0x76874f);
+    bool MillerTest(const long long n);
+    long long EulersTotientFunction(const long long x = 1.0);
+    long long MakePublicKey(const long long value = 0x47867f);
+    long long MakePrivateKey(const long long value = 0x76874f);
 
 //algorithms
 private:
@@ -28,10 +34,10 @@ private:
     bool DecryptoRSA();
 
 private:
-    float firstSeed;
-    float secondSeed;
-    float publicKey;
-    float privateKey;
+    long long firstSeed;
+    long long secondSeed;
+    long long publicKey;
+    long long privateKey;
 };
 
 #endif
