@@ -11,26 +11,6 @@ Filemanager::~Filemanager()
     qDebug() << "Filemanager object deleted";
 }
 
-void Filemanager::LoadFile(const QString& filename)
-{
-    if(filename.isEmpty())
-        throw "Can't load file: file name is empty";
-
-    QFile file;
-    file.setFileName(filename);
-
-    if(file.open(QFile::ReadWrite))
-    {
-
-
-        file.close();
-    }
-    else
-        file.close();
-
-    return;
-}
-
 void Filemanager::LoadFiles(const QStringList& filenames)
 {
     if(filenames.isEmpty())

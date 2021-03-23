@@ -36,12 +36,12 @@ bool CryptoAlgo::MillerTest(const long long n)
     double round = log(n);
 }
 
-long long CryptoAlgo::EulersTotientFunction(const long long n)
+long long CryptoAlgo::EulersTotientFunction(const long long p, const long long n)
 {
-    if(n > 1)
-        return (n * 3.14 * (1 - (1 / n)));
+    if(p > 1)
+        return (pow(p, n) - pow(p, n - 1));
     else
-        return n;
+        return p;
 }
 
 long long CryptoAlgo::MakePublicKey(const long long value)

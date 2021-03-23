@@ -5,6 +5,8 @@
 #include <iostream>
 #include <algorithm>
 
+using namespace std;
+
 class CryptoAlgo
 {
 
@@ -18,13 +20,13 @@ public:
 
 //random
 private:
-    long long SelectFirstSeed(long long value = 1.0);
-    long long SelectSecondSeed(long long value = 1.0);
+    long long SelectFirstSeed(long long value = 1);
+    long long SelectSecondSeed(long long value = 1);
 
 //math
 protected:
-    bool MillerTest(const long long n);
-    long long EulersTotientFunction(const long long x = 1.0);
+    bool MillerTest(const long long n = 2);
+    long long EulersTotientFunction(const long long p, const long long n);
     long long MakePublicKey(const long long value = 0x47867f);
     long long MakePrivateKey(const long long value = 0x76874f);
 

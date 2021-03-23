@@ -21,7 +21,6 @@ public:
     ~Filemanager();
 
 public slots:
-    void LoadFile(const QString& filename);
     void LoadFiles(const QStringList& filenames);
 
 private:
