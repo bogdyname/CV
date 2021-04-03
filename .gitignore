@@ -1,1 +1,3 @@
-#build folders Windows/Linux
+#build folders Windows
+MSL/out/
+.vs/
