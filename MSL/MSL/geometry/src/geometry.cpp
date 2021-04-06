@@ -2,8 +2,8 @@
 
 namespace geometry
 {
-	Geometry::Geometry(double a = 0, double b = 0, int edges = 0)
-		: a(a), b(b), edges(edges)
+	Geometry::Geometry(double a, double b, int edges, FigureClass figure)
+		: a(a), b(b), edges(edges), figure(figure)
 	{
 
 	}
