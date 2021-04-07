@@ -1,8 +1,8 @@
-#include <iostream>
+#include "../../math/include/math.hpp"
 
 namespace geometry
 {
-	class Geometry
+	class Geometry : public Math
 	{
 
 	protected:
@@ -17,7 +17,7 @@ namespace geometry
 		};
 
 	public:
-		Geometry(double a = 0, double b = 0, int edges = 0, FigureClass figure = point);
+		Geometry(Math* parent = 0, double a = 0, double b = 0, int edges = 0, FigureClass figure = point);
 		~Geometry();
 
 	public:
@@ -47,5 +47,6 @@ namespace geometry
 		double Perimeter;
 		double Square;
 		FigureClass figure;
+		Math* parent;
 	};
 };
