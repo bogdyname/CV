@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Graphs::Graphs(float x = 1.0, float y = 1.0) :
+Graphs::Graphs(float x, float y) :
     x(x), y(y)
 {
 
@@ -15,8 +15,10 @@ Graphs::~Graphs()
 
 bool Graphs::InitWindowsApi()
 {
-    HWND hwnd = GetConsoleWindow();
-    HDC hdc = GetDC(hwnd);
+    hwnd = GetConsoleWindow();
+    hdc = GetDC(hwnd);
+
+    return true;
 }
 
 bool Graphs::DrawGraph()
@@ -26,11 +28,7 @@ bool Graphs::DrawGraph()
         SetPixel(hdc, x, 50 + 25 * cos(iter), RGB(50, 200, 150));
         x += 0.1;
     }
-}
 
-int main()
-{
     cin.ignore();
-
-    return 0;
+    return true;
 }
