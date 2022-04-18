@@ -1,2 +1,11 @@
+#IDE
 __pycache__/
 .vs/
+
+#Telegram
+*.session
+*.session-journal
+.jpg
+
+#App
+config.ini
