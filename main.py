@@ -1,3 +1,5 @@
+import logging as log
+
 import asyncio
 import configparser
 from telethon.sync import TelegramClient, events
@@ -36,18 +38,7 @@ def Run_H8_Chat(username = '', api_id = '', api_hash = ''):
     client.run_until_disconnected()
 
 if __name__ == '__main__':
-    #config reader
-    config = configparser.ConfigParser()
-    config.read("config.ini")
-   
-    #get data
-    api_id = config['Telegram']['api_id']
-    api_hash = config['Telegram']['api_hash']
-    username = config['Telegram']['username']
 
-    print('Api id: ', api_id)
-    print('Hash id: ', api_hash)
-    print('Username: ', username)
 
     if not Run_H8_Chat(username, api_id, api_hash):
         print('Config data is empty')
