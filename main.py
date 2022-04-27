@@ -38,7 +38,7 @@ def Run_H8_Chat(username = '', api_id = '', api_hash = ''):
     client.run_until_disconnected()
 
 if __name__ == '__main__':
-
+    log.info('Start main program')
 
     if not Run_H8_Chat(username, api_id, api_hash):
         print('Config data is empty')
