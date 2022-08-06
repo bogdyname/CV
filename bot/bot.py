@@ -1,11 +1,10 @@
 import asyncio
-#import logging as log
 from telethon.sync import TelegramClient, events
 
 class Bot:
 	def __init__(self, api_id='', api_hash=''):
 		print('Create bot.')
-		# array to save id of user
+		# array to save id of users
 		self.user_id_list = []
 		self.api_id = api_id
 		self.api_hash = api_hash
@@ -18,5 +17,19 @@ class Bot:
 			log.error('API hash: ', api_hash)
 			return False
 
-	def Statistic(self, logger, user_id):
+	def Statistic(self, logger=None, user_id='', data=''):
+		if logger is None:
+			print('Logger for statistic is None')
+			return False
+
+		if not user_id:
+			logger.critical('User id is empty!')
+			return False
+
+		if not data:
+			logger.critical('Data of statistic is empty!')
+			return False
+
 		log.info('Write statistic of selected user.')
+
+		return True

@@ -5,7 +5,6 @@ import configparser
 from telethon.sync import TelegramClient, events
 
 def Run_H8_Chat(username = '', api_id = '', api_hash = ''):
-
     if not username or not api_id or not api_hash:
         return False
 
