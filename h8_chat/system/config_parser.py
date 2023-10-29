@@ -1,4 +1,5 @@
 import configparser
+import logging as log
 import pandas as pd
 
 class Config:

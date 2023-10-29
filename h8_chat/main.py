@@ -1,5 +1,3 @@
-import logging as log
-
 import asyncio
 import configparser
 from telethon.sync import TelegramClient, events
